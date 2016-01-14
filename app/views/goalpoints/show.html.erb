@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Goalpointname:</strong>
+  <%= @goalpoint.GoalpointName %>
+</p>
+
+<p>
+  <strong>Goalpointspendtime:</strong>
+  <%= @goalpoint.GoalpointSpendTime %>
+</p>
+
+<%= link_to 'Edit', edit_goalpoint_path(@goalpoint) %> |
+<%= link_to 'Back', goalpoints_path %>

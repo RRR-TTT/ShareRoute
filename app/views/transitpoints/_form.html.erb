@@ -1,0 +1,25 @@
+<%= form_for(@transitpoint) do |f| %>
+  <% if @transitpoint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transitpoint.errors.count, "error") %> prohibited this transitpoint from being saved:</h2>
+
+      <ul>
+      <% @transitpoint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :TransitpointName %><br>
+    <%= f.text_field :TransitpointName %>
+  </div>
+  <div class="field">
+    <%= f.label :TransitpointSpendTime %><br>
+    <%= f.number_field :TransitpointSpendTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

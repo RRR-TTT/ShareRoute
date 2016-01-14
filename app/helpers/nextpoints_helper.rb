@@ -1,0 +1,2 @@
+module NextpointsHelper
+end

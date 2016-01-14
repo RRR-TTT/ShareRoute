@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  resources :maps
+  resources :explanations
+  resources :point_pictures
+  resources :nextpoints
+  resources :transitpoints
+  resources :goalpoints
+  resources :startpoints
+  resources :user_routes
+  devise_for :users
+	root 'page#index'
+  get 'page/index'
+
+  get 'page/show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -8,6 +8,28 @@
 </head>
 <body>
 
+  <header>
+    <nav class="navbar navbar-default navbar-right">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to image_tag('/assets/logo.png', { :border =>'0', :alt =>'ロゴ'}), root_path%>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+            <li><%= link_to 'ログイン', new_user_session_path %></li>
+          <% end %>
+       </ul>
+      </div>
+    </nav>
+  </header>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+
 <%= yield %>
 
 </body>

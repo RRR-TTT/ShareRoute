@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Transitpoints</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transitpointname</th>
+      <th>Transitpointspendtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transitpoints.each do |transitpoint| %>
+      <tr>
+        <td><%= transitpoint.TransitpointName %></td>
+        <td><%= transitpoint.TransitpointSpendTime %></td>
+        <td><%= link_to 'Show', transitpoint %></td>
+        <td><%= link_to 'Edit', edit_transitpoint_path(transitpoint) %></td>
+        <td><%= link_to 'Destroy', transitpoint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transitpoint', new_transitpoint_path %>

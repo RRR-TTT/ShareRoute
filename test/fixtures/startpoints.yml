@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  StartpointName: MyString
+  StartpointSpendTime: 1
+
+two:
+  StartpointName: MyString
+  StartpointSpendTime: 1

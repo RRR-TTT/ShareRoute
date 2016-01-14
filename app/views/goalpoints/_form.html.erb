@@ -1,0 +1,25 @@
+<%= form_for(@goalpoint) do |f| %>
+  <% if @goalpoint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@goalpoint.errors.count, "error") %> prohibited this goalpoint from being saved:</h2>
+
+      <ul>
+      <% @goalpoint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :GoalpointName %><br>
+    <%= f.text_field :GoalpointName %>
+  </div>
+  <div class="field">
+    <%= f.label :GoalpointSpendTime %><br>
+    <%= f.text_field :GoalpointSpendTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

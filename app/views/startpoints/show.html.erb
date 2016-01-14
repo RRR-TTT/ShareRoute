@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startpointname:</strong>
+  <%= @startpoint.StartpointName %>
+</p>
+
+<p>
+  <strong>Startpointspendtime:</strong>
+  <%= @startpoint.StartpointSpendTime %>
+</p>
+
+<%= link_to 'Edit', edit_startpoint_path(@startpoint) %> |
+<%= link_to 'Back', startpoints_path %>

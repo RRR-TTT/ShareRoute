@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @user_route.total_time %>
+</p>
+
+<p>
+  <strong>Userroutename:</strong>
+  <%= @user_route.UserRouteName %>
+</p>
+
+<%= link_to 'Edit', edit_user_route_path(@user_route) %> |
+<%= link_to 'Back', user_routes_path %>

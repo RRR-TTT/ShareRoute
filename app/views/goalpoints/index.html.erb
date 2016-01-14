@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Goalpoints</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Goalpointname</th>
+      <th>Goalpointspendtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goalpoints.each do |goalpoint| %>
+      <tr>
+        <td><%= goalpoint.GoalpointName %></td>
+        <td><%= goalpoint.GoalpointSpendTime %></td>
+        <td><%= link_to 'Show', goalpoint %></td>
+        <td><%= link_to 'Edit', edit_goalpoint_path(goalpoint) %></td>
+        <td><%= link_to 'Destroy', goalpoint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goalpoint', new_goalpoint_path %>

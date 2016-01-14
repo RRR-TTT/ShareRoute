@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nextpointname:</strong>
+  <%= @nextpoint.NextpointName %>
+</p>
+
+<p>
+  <strong>Nextpointrequiredtime:</strong>
+  <%= @nextpoint.NextpointRequiredTime %>
+</p>
+
+<p>
+  <strong>Nextpointtransportation:</strong>
+  <%= @nextpoint.NextpointTransportation %>
+</p>
+
+<%= link_to 'Edit', edit_nextpoint_path(@nextpoint) %> |
+<%= link_to 'Back', nextpoints_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  NextpointName: MyString
+  NextpointRequiredTime: 1
+  NextpointTransportation: MyString
+
+two:
+  NextpointName: MyString
+  NextpointRequiredTime: 1
+  NextpointTransportation: MyString

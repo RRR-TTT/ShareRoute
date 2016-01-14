@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transitpointname:</strong>
+  <%= @transitpoint.TransitpointName %>
+</p>
+
+<p>
+  <strong>Transitpointspendtime:</strong>
+  <%= @transitpoint.TransitpointSpendTime %>
+</p>
+
+<%= link_to 'Edit', edit_transitpoint_path(@transitpoint) %> |
+<%= link_to 'Back', transitpoints_path %>

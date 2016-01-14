@@ -1,0 +1,25 @@
+<%= form_for(@startpoint) do |f| %>
+  <% if @startpoint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@startpoint.errors.count, "error") %> prohibited this startpoint from being saved:</h2>
+
+      <ul>
+      <% @startpoint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :StartpointName %><br>
+    <%= f.text_field :StartpointName %>
+  </div>
+  <div class="field">
+    <%= f.label :StartpointSpendTime %><br>
+    <%= f.number_field :StartpointSpendTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

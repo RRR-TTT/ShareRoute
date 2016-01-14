@@ -1,0 +1,29 @@
+<%= form_for(@nextpoint) do |f| %>
+  <% if @nextpoint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nextpoint.errors.count, "error") %> prohibited this nextpoint from being saved:</h2>
+
+      <ul>
+      <% @nextpoint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :NextpointName %><br>
+    <%= f.text_field :NextpointName %>
+  </div>
+  <div class="field">
+    <%= f.label :NextpointRequiredTime %><br>
+    <%= f.number_field :NextpointRequiredTime %>
+  </div>
+  <div class="field">
+    <%= f.label :NextpointTransportation %><br>
+    <%= f.text_field :NextpointTransportation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Explanationcontent:</strong>
+  <%= @explanation.ExplanationContent %>
+</p>
+
+<p>
+  <strong>Updateduser:</strong>
+  <%= @explanation.UpdatedUser %>
+</p>
+
+<p>
+  <strong>Lastupdate:</strong>
+  <%= @explanation.LastUpdate %>
+</p>
+
+<%= link_to 'Edit', edit_explanation_path(@explanation) %> |
+<%= link_to 'Back', explanations_path %>
