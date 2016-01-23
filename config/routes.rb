@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'user_relationship/show'
+
+  get 'user_relationship/index'
+
+  get 'user_relationship/edit'
+
   resources :maps
   resources :explanations
   resources :point_pictures
